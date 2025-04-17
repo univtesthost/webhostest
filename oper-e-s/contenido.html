@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido - Técnicas de E/S</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    table th {
+      background-color: #27ae60;
+      color: white;
+    }
+    .prompt {
+      background: #e8f5e9;
+      border-left: 5px solid #2ecc71;
+      padding: 20px;
+      margin-top: 40px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Técnicas posibles para las operaciones de Entrada/Salida (E/S)</h1>
+
+    <h2>Cuadro Comparativo</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Técnica</th>
+          <th>Descripción</th>
+          <th>Ventajas</th>
+          <th>Desventajas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>E/S Programada</td>
+          <td>El CPU ejecuta instrucciones para verificar y realizar operaciones de E/S directamente.</td>
+          <td>
+            - Fácil de implementar<br>
+            - Control total por el CPU
+          </td>
+          <td>
+            - Poco eficiente<br>
+            - El CPU espera sin poder hacer otras tareas
+          </td>
+        </tr>
+        <tr>
+          <td>E/S por Interrupciones</td>
+          <td>Los dispositivos generan interrupciones para notificar al CPU cuando están listos.</td>
+          <td>
+            - Mejora la eficiencia del CPU<br>
+            - Respuesta rápida a eventos externos
+          </td>
+          <td>
+            - Mayor complejidad en el manejo<br>
+            - Requiere hardware para interrupciones
+          </td>
+        </tr>
+        <tr>
+          <td>DMA (Acceso Directo a Memoria)</td>
+          <td>Permite que los datos se transfieran directamente entre memoria y dispositivos sin intervención del CPU.</td>
+          <td>
+            - Alta eficiencia en la transferencia de datos<br>
+            - Libera al CPU durante las transferencias
+          </td>
+          <td>
+            - Requiere controlador DMA<br>
+            - Más costoso y complejo
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prompt">
+      <strong>Prompt para exposición:</strong><br>
+      “Buenos días/tardes. Hoy vamos a hablar sobre las técnicas posibles para las operaciones de entrada y salida en los sistemas computacionales. Existen tres técnicas principales: E/S programada, E/S por interrupciones y DMA o acceso directo a memoria. Cada una tiene sus ventajas y desventajas, y se utilizan dependiendo de la complejidad del sistema y los recursos disponibles. A continuación, les presentaremos un cuadro comparativo para entender mejor cómo funcionan y en qué se diferencian.”
+    </div>
+  </div>
+</body>
+</html>
