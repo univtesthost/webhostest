@@ -39,6 +39,26 @@
       background-color: #27ae60;
       color: white;
     }
+    .grid-comparativo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background-color: #ffffff;
+      border-left: 5px solid #2980b9;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+    .card p {
+      margin: 8px 0;
+    }
   </style>
 </head>
 <body>
@@ -94,6 +114,29 @@
         </tr>
       </tbody>
     </table>
+
+    <h2>Resumen Sistémico Visual</h2>
+    <div class="grid-comparativo">
+      <div class="card">
+        <h3>E/S Programada</h3>
+        <p><strong>CPU:</strong> Controla todo el proceso.</p>
+        <p><strong>Rendimiento:</strong> Bajo, por espera activa.</p>
+        <p><strong>Ideal para:</strong> Sistemas simples.</p>
+      </div>
+      <div class="card">
+        <h3>E/S por Interrupciones</h3>
+        <p><strong>CPU:</strong> Atiende cuando se le avisa.</p>
+        <p><strong>Rendimiento:</strong> Medio, permite multitarea.</p>
+        <p><strong>Ideal para:</strong> Sistemas interactivos.</p>
+      </div>
+      <div class="card">
+        <h3>DMA</h3>
+        <p><strong>CPU:</strong> No participa directamente.</p>
+        <p><strong>Rendimiento:</strong> Alto, por transferencia directa.</p>
+        <p><strong>Ideal para:</strong> Transferencias masivas de datos.</p>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
