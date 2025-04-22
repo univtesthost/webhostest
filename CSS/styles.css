@@ -57,11 +57,13 @@ header {
 }
 
 .logo {
-    color: #FFD700;
-    font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none;
+    max-width: 150px;
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
 }
 
 .nav-links {
