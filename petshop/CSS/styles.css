@@ -76,19 +76,28 @@ header {
     font-size: 1.3rem; /* Aumentado ligeramente */
     letter-spacing: 1px;
     transition: color 0.3s;
-    display: block; /* Asegura que todos los enlaces sean visibles */
+    display: inline-block !important; /* Fuerza la visibilidad */
+}
+
+/* Estilo especial para el enlace Nosotros */
+.nosotros-link {
+    color: #FFD700 !important; /* Dorado y forzado con !important */
+    display: inline-block !important; /* Forzado con !important */
+    opacity: 1 !important; /* Asegura visibilidad completa */
+    visibility: visible !important; /* Asegura visibilidad */
+    pointer-events: auto !important; /* Permite interacción */
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #FFD700; /* El enlace activo se destaca en dorado pero sigue visible */
+    color: #FFD700; /* El enlace activo se destaca en dorado */
 }
 
 /* Estilos adicionales para la página Nosotros */
 
-/* Banner de Nosotros - Reducido en altura */
-.banner-nosotros {
-    height: 30vh; /* Reducido de 50vh a 30vh */
+/* Banner de Nosotros - Mucho más compacto */
+.banner-nosotros-compacto {
+    height: 20vh; /* Reducido significativamente de 30vh */
     background-image: url('img/banner-nosotros.jpg');
     background-size: cover;
     background-position: center;
@@ -112,15 +121,15 @@ header {
 }
 
 .banner-overlay h1 {
-    font-size: 3.8rem; /* Reducido de 4.8rem */
-    margin-bottom: 1.5rem; /* Reducido de 2rem */
+    font-size: 3rem; /* Reducido significativamente */
+    margin-bottom: 0.8rem; /* Reducido */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .banner-overlay p {
-    font-size: 1.6rem; /* Reducido de 1.8rem */
-    max-width: 600px;
+    font-size: 1.4rem; /* Reducido */
+    max-width: 500px;
 }
 
 /* Sección Historia */
