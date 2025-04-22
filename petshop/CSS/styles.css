@@ -56,7 +56,7 @@ header {
 }
 
 .logo {
-    max-width: 100px; /* Ajustado para que el logo se vea mejor en el navbar */
+    max-width: 80px; /* Ajustado para que el logo se vea mejor en el navbar */
     display: block;
 }
 
