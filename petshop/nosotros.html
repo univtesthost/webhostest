@@ -7,36 +7,6 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Estilos inline para solucionar problemas específicos -->
-    <style>
-        /* Ajustar la navegación para que todos los enlaces sean visibles */
-        .nav-links {
-            margin-right: 20px; /* Añadir margen a la derecha para alejar del borde */
-            justify-content: flex-end; /* Alinear elementos a la izquierda */
-            width: auto; /* Permitir que ocupe el espacio necesario */
-            gap: 1.5rem !important; /* Reducir el espacio entre enlaces */
-        }
-        
-        .nav-link {
-            font-size: 1.1rem !important; /* Reducir ligeramente el tamaño de la fuente */
-            padding: 0.3rem 0.5rem !important; /* Añadir algo de padding para mejorar la visibilidad */
-            display: inline-block !important; /* Forzar la visibilidad */
-        }
-        
-        /* Hacer el banner más pequeño */
-        .banner-nosotros {
-            height: 20vh !important;
-        }
-        
-        .banner-overlay h1 {
-            font-size: 3rem !important;
-            margin-bottom: 0.8rem !important;
-        }
-        
-        .banner-overlay p {
-            font-size: 1.4rem !important;
-        }
-    </style>
 </head>
 <body>
     <!------------------------------------------Header--------------------------------------------->
@@ -44,23 +14,23 @@
         <div class="container-header">
             <nav class="nav">
                 <a href="index.html" class="logo"> <img src="img/logo.png" alt="BunnyShop Logo"> </a>
-                <div class="nav-links" style="gap: 1.5rem !important; margin-right: 20px;">
-                    <a href="productos.html" class="nav-link" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important;">PRODUCTOS</a>
-                    <a href="adopta.html" class="nav-link" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important;">ADOPTA</a>
-                    <a href="cuidados.html" class="nav-link" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important;">CUIDADOS</a>
-                    <a href="contacto.html" class="nav-link" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important;">CONTÁCTANOS</a>
-                    <a href="sugerencias.html" class="nav-link" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important;">SUGERENCIAS</a>
-                    <a href="nosotros.html" class="nav-link active" style="font-size: 1.1rem !important; padding: 0.3rem 0.5rem !important; color:#FFD700 !important;">NOSOTROS</a>
+                <div class="nav-links">
+                    <a href="productos.html" class="nav-link">PRODUCTOS</a>
+                    <a href="adopta.html" class="nav-link">ADOPTA</a>
+                    <a href="cuidados.html" class="nav-link">CUIDADOS</a>
+                    <a href="contacto.html" class="nav-link">CONTÁCTANOS</a>
+                    <a href="sugerencias.html" class="nav-link">SUGERENCIAS</a>
+                    <a href="nosotros.html" class="nav-link nosotros-link">NOSOTROS</a> <!-- Clase especial para NOSOTROS -->
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Banner de Nosotros -->
-    <section class="banner-nosotros" style="height: 20vh !important;">
+    <!-- Banner de Nosotros - Más compacto -->
+    <section class="banner-nosotros-compacto">
         <div class="banner-overlay">
-            <h1 style="font-size: 3rem !important; margin-bottom: 0.8rem !important;">Conócenos</h1>
-            <p style="font-size: 1.4rem !important;">Un equipo apasionado por el bienestar de tus mascotas</p>
+            <h1>Conócenos</h1>
+            <p>Un equipo apasionado por el bienestar de tus mascotas</p>
         </div>
     </section>
 
@@ -159,22 +129,22 @@
             <h2 class="section-title">Nuestros Compromisos</h2>
             <div class="compromisos-grid">
                 <div class="compromiso-card">
-                    <div style="height: 200px; overflow: hidden;">
-                        <img src="img/productos.jpg" alt="Productos de calidad" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="compromiso-img">
+                        <img src="img/productos.jpg" alt="Productos de calidad">
                     </div>
                     <h3>Productos Especializados</h3>
                     <p>Ofrecemos productos específicamente diseñados para las necesidades de conejos, perros y gatos, seleccionados por su calidad y adecuación para cada especie.</p>
                 </div>
                 <div class="compromiso-card">
-                    <div style="height: 200px; overflow: hidden;">
-                        <img src="img/adopcion.jpg" alt="Adopción responsable" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="compromiso-img">
+                        <img src="img/adopcion.jpg" alt="Adopción responsable">
                     </div>
                     <h3>Adopción Responsable</h3>
                     <p>Rescatamos y facilitamos la adopción de animales abandonados, educando a los nuevos dueños sobre el cuidado adecuado de sus mascotas para prevenir futuros abandonos.</p>
                 </div>
                 <div class="compromiso-card">
-                    <div style="height: 200px; overflow: hidden;">
-                        <img src="img/educacion.jpg" alt="Educación" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="compromiso-img">
+                        <img src="img/educacion.jpg" alt="Educación">
                     </div>
                     <h3>Educación Continua</h3>
                     <p>Proporcionamos información actualizada sobre el cuidado adecuado de mascotas, ayudando a mejorar la calidad de vida de los animales y previniendo problemas comunes.</p>
@@ -191,48 +161,48 @@
             
             <div class="equipo-grid">
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo1.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo1.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Andrew</h3>
                     <p class="cargo">Fundador</p>
                     <p>Especialista en comportamiento animal y amante de los conejos desde pequeño. Lidera nuestro equipo con una visión centrada en el bienestar animal.</p>
                 </div>
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo2.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo2.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Johan</h3>
                     <p class="cargo">Director de Operaciones</p>
                     <p>Con experiencia en logística y gestión de inventario, asegura que nuestros productos lleguen a tiempo y en perfectas condiciones.</p>
                 </div>
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo3.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo3.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Robert</h3>
                     <p class="cargo">Especialista en Nutrición Animal</p>
                     <p>Experto en nutrición, selecciona cuidadosamente los productos alimenticios para garantizar la salud y bienestar de las mascotas.</p>
                 </div>
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo4.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo4.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Salvador</h3>
                     <p class="cargo">Coordinador de Adopciones</p>
                     <p>Apasionado por el rescate animal, coordina nuestros programas de adopción y seguimiento para asegurar hogares permanentes y amorosos.</p>
                 </div>
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo5.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo5.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Ariana</h3>
                     <p class="cargo">Especialista en Marketing</p>
                     <p>Creativa y entusiasta, gestiona nuestras redes sociales y campañas de concientización sobre adopción responsable y cuidado animal.</p>
                 </div>
                 <div class="equipo-card">
-                    <div style="height: 280px; overflow: hidden;">
-                        <img src="img/equipo6.jpg" alt="Miembro del equipo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="equipo-img">
+                        <img src="img/equipo6.jpg" alt="Miembro del equipo">
                     </div>
                     <h3>Walter</h3>
                     <p class="cargo">Responsable de Atención al Cliente</p>
