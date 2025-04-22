@@ -56,7 +56,7 @@ header {
 }
 
 .logo {
-    max-width: 140px; /* Ajustado para que el logo se vea mejor en el navbar */
+    max-width: 100px; /* Ajustado para que el logo se vea mejor en el navbar */
     display: block;
 }
 
@@ -71,23 +71,18 @@ header {
 }
 
 .nav-link {
-    color: #fff;
-    font-size: 1.3rem; /* Aumentado ligeramente */
+    color: #FFF;
+    font-size: 1.3rem;
     letter-spacing: 1px;
     transition: color 0.3s;
-    display: inline-block !important; /* Fuerza la visibilidad */
+    display: inline-block;
 }
 
-/* Estilo especial para el enlace Nosotros */
-.nosotros-link {
-    color: #FFD700 !important; /* Dorado y forzado con !important */
-    display: inline-block !important; /* Forzado con !important */
-    opacity: 1 !important; /* Asegura visibilidad completa */
-    visibility: visible !important; /* Asegura visibilidad */
-    pointer-events: auto !important; /* Permite interacción */
+
+.nav-link:hover {
+    color: #FFD700;
 }
 
-.nav-link:hover,
 .nav-link.active {
     color: #FFD700; /* El enlace activo se destaca en dorado */
 }
