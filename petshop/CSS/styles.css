@@ -5,23 +5,34 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: 10px;    /* 1 rem */
     color: #000;
-    padding: 5%;
+    padding: 0;
+    margin: 0;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
 section {
     padding: 7.9rem;
     overflow: hidden;
 }
+
 img {
     width: 100%;
     max-width: 100%;
     height: auto;  
 }
+
 a {
     text-decoration: none; 
 }
+
 p {
     font-size: 1.6rem;
 }
+
 /* ---------------------------------------------------------------------- */
 /* Header */
 header {
@@ -30,59 +41,44 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.705), transparent);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
+
 .container-header {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 2.4rem;
+    width: 100%;
+    padding: 0 5%;
 }
+
 .nav {
     height: 7.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.nav-list {
-    list-style: none;
-    position: initial;
-    top: 0;
-    left: 0;
-    width: initial;
-    height: initial;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: initial;
-}
+
 .logo {
-    width: 250px;
+    color: #FFD700;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
-.nav-item {
-    border-bottom: 2px solid rgba(255, 255, 255, .3);
-    margin: 0 2.4rem;
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
+
 .nav-link {
-    display: block;
     color: #fff;
-    text-transform: uppercase; /* mayusculas */
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    margin-right: -2px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
 }
-.nav-link:hover {
-    color: #3bcc75;
-}
-.active {
-    position: relative;
-}
-.active::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    bottom: -3px;
+
+.nav-link:hover,
+.nav-link.active {
+    color: #FFD700;
 }
 
 /* Estilos adicionales para la página Nosotros */
@@ -499,6 +495,10 @@ footer {
     .compromisos-grid,
     .equipo-grid {
         gap: 2rem;
+    }
+    
+    .nav-links {
+        display: none;
     }
     
     .footer-content {
