@@ -56,13 +56,16 @@ header {
 }
 
 .logo {
-    max-width: 80px; /* Ajustado para que el logo se vea mejor en el navbar */
-    display: block;
+    max-width: 100px !important; /* Ajusta este valor según necesites */
+    width: auto !important;
+    display: block !important;
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    max-width: 100% !important;
 }
 
 .nav-links {
