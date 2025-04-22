@@ -1,436 +1,237 @@
-/* Estilos adicionales para la página Nosotros */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BunnyShop - Nosotros</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!------------------------------------------Header--------------------------------------------->
+    <header>
+        <div class="container-header">
+            <nav class="nav">
+                <a href="../index.html" class="logo"> <img src="../img/logo.png" alt="BunnyShop Logo"> </a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../HTML/Productos.html" class="nav-link">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/Adopta.html" class="nav-link">Adopta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/Cuidados.html" class="nav-link">Cuidados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/Nosotros.html" class="nav-link active">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/Contacto.html" class="nav-link">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../HTML/Sugerencias.html" class="nav-link">Sugerencias</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-/* Banner de Nosotros */
-.banner-nosotros {
-    height: 50vh;
-    background-image: url('../img/banner-nosotros.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    margin-top: 7.2rem;
-}
+    <!-- Banner de Nosotros -->
+    <section class="banner-nosotros">
+        <div class="banner-overlay">
+            <h1>Conócenos</h1>
+            <p>Un equipo apasionado por el bienestar de tus mascotas</p>
+        </div>
+    </section>
 
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-}
+    <!-- Sección de Historia -->
+    <section class="historia-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="historia-content">
+                <div class="historia-img">
+                    <img src="../img/historia.jpg" alt="Historia de BunnyShop">
+                </div>
+                <div class="historia-text">
+                    <p>BunnyShop nació en 2018 gracias a un grupo de amantes de los animales que identificaron la necesidad de ofrecer productos especializados y de alta calidad para perros, gatos y conejos.</p>
+                    <p>Lo que comenzó como una pequeña tienda local se ha convertido en un referente en el cuidado de mascotas, manteniendo siempre nuestra filosofía original: proporcionar los mejores productos y servicios para el bienestar de tus compañeros peludos.</p>
+                    <p>Hoy en día, seguimos creciendo con la misma pasión por los animales que nos impulsó desde el principio, ampliando nuestra selección de productos y colaborando con refugios locales para fomentar la adopción responsable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.banner-overlay h1 {
-    font-size: 4.8rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+    <!-- Sección de Misión, Visión y Valores -->
+    <section class="mvv-section">
+        <div class="container">
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Misión</h3>
+                    <p>Proporcionar productos especializados y de alta calidad que mejoren la calidad de vida de perros, gatos y conejos, mientras fomentamos prácticas de tenencia responsable y apoyamos iniciativas de bienestar animal.</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Visión</h3>
+                    <p>Ser reconocidos como la tienda de referencia en productos para mascotas, destacando por nuestra selección especializada, asesoramiento experto y compromiso con el bienestar animal.</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Amor por los animales</li>
+                        <li>Responsabilidad y ética</li>
+                        <li>Calidad sin compromisos</li>
+                        <li>Atención personalizada</li>
+                        <li>Educación continua</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.banner-overlay p {
-    font-size: 1.8rem;
-    max-width: 600px;
-}
+    <!-- Nuestros Compromisos -->
+    <section class="compromisos-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Compromisos</h2>
+            <div class="compromisos-grid">
+                <div class="compromiso-card">
+                    <img src="../img/productos.jpg" alt="Productos de calidad">
+                    <h3>Productos de Calidad</h3>
+                    <p>Seleccionamos cuidadosamente cada producto en nuestro catálogo, priorizando calidad, seguridad y adecuación para cada tipo de mascota.</p>
+                </div>
+                <div class="compromiso-card">
+                    <img src="../img/adopcion.jpg" alt="Adopción responsable">
+                    <h3>Adopción Responsable</h3>
+                    <p>Colaboramos con refugios locales y promovemos la adopción responsable como alternativa a la compra de mascotas.</p>
+                </div>
+                <div class="compromiso-card">
+                    <img src="../img/medio-ambiente.jpg" alt="Medio ambiente">
+                    <h3>Medio Ambiente</h3>
+                    <p>Nos esforzamos por ofrecer productos respetuosos con el medio ambiente y reducir nuestra huella ecológica en todas nuestras operaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Sección Historia */
-.section-title {
-    font-size: 3.2rem;
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
-    padding-bottom: 1.5rem;
-}
+    <!-- Nuestro Equipo -->
+    <section class="equipo-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <p class="equipo-intro">En BunnyShop, contamos con un equipo de profesionales apasionados por los animales y con amplia experiencia en el sector.</p>
+            
+            <div class="equipo-grid">
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <img src="../img/equipo1.jpg" alt="Miembro del equipo">
+                    </div>
+                    <h3>María López</h3>
+                    <p class="cargo">Fundadora y Directora</p>
+                    <p>Veterinaria de profesión y amante de los animales desde pequeña. María fundó BunnyShop con la visión de crear un espacio especializado para los amantes de mascotas.</p>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <img src="../img/equipo2.jpg" alt="Miembro del equipo">
+                    </div>
+                    <h3>Carlos Rodríguez</h3>
+                    <p class="cargo">Especialista en Nutrición Animal</p>
+                    <p>Con más de 10 años de experiencia en nutrición animal, Carlos asesora a nuestros clientes sobre las mejores opciones alimenticias para sus mascotas.</p>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-img">
+                        <img src="../img/equipo3.jpg" alt="Miembro del equipo">
+                    </div>
+                    <h3>Laura Martínez</h3>
+                    <p class="cargo">Coordinadora de Adopciones</p>
+                    <p>Laura trabaja estrechamente con refugios locales para facilitar adopciones responsables y brindar asesoramiento a los nuevos dueños.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #3bcc75;
-}
+    <!-- Testimonios -->
+    <section class="testimonios-section">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-slider">
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Desde que descubrí BunnyShop, no compro en otra tienda. Sus productos para conejos son los mejores y el asesoramiento que ofrecen es invaluable."</p>
+                        <div class="cliente-info">
+                            <h4>Ana García</h4>
+                            <p>Dueña de Snowball</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Mi gato es bastante exigente con su comida, pero gracias a las recomendaciones del equipo, encontramos la marca perfecta. ¡Ahora está más sano y feliz!"</p>
+                        <div class="cliente-info">
+                            <h4>Roberto Sánchez</h4>
+                            <p>Dueño de Michi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"La selección de productos para perros es increíble y los precios son muy competitivos. Además, adoptamos a nuestro perro gracias a su programa de adopción."</p>
+                        <div class="cliente-info">
+                            <h4>Elena Díaz</h4>
+                            <p>Dueña de Max</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../img/logo.png" alt="BunnyShop Logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="../HTML/Productos.html">Productos</a></li>
+                        <li><a href="../HTML/Adopta.html">Adopta</a></li>
+                        <li><a href="../HTML/Cuidados.html">Cuidados</a></li>
+                        <li><a href="../HTML/Nosotros.html">Nosotros</a></li>
+                        <li><a href="../HTML/Contacto.html">Contacto</a></li>
+                        <li><a href="../HTML/Sugerencias.html">Sugerencias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@bunnyshop.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BunnyShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-.historia-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4rem;
-}
-
-.historia-img {
-    flex: 1;
-    min-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.historia-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.historia-text p {
-    margin-bottom: 1.6rem;
-    line-height: 1.8;
-}
-
-/* Sección Misión, Visión, Valores */
-.mvv-section {
-    background-color: #f9f9f9;
-}
-
-.mvv-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.mvv-card {
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.mvv-card:hover {
-    transform: translateY(-10px);
-}
-
-.mvv-icon {
-    font-size: 3.5rem;
-    color: #3bcc75;
-    margin-bottom: 2rem;
-}
-
-.mvv-card h3 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.mvv-card p {
-    line-height: 1.8;
-}
-
-.mvv-card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.mvv-card ul li {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-}
-
-.mvv-card ul li::before {
-    content: "•";
-    color: #3bcc75;
-    position: absolute;
-    left: 0;
-}
-
-/* Compromisos */
-.compromisos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.compromiso-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.compromiso-card:hover {
-    transform: translateY(-10px);
-}
-
-.compromiso-card img {
-    height: 200px;
-    object-fit: cover;
-}
-
-.compromiso-card h3 {
-    font-size: 2rem;
-    padding: 2rem 2rem 1rem;
-}
-
-.compromiso-card p {
-    padding: 0 2rem 2rem;
-    line-height: 1.8;
-}
-
-/* Equipo */
-.equipo-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    font-size: 1.8rem;
-}
-
-.equipo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.equipo-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.equipo-card:hover {
-    transform: translateY(-10px);
-}
-
-.equipo-img {
-    height: 300px;
-    overflow: hidden;
-}
-
-.equipo-img img {
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.equipo-card:hover .equipo-img img {
-    transform: scale(1.1);
-}
-
-.equipo-card h3 {
-    font-size: 2.2rem;
-    padding: 2rem 2rem 0.5rem;
-}
-
-.cargo {
-    color: #3bcc75;
-    font-weight: 500;
-    padding: 0 2rem 1rem;
-}
-
-.equipo-card p:not(.cargo) {
-    padding: 0 2rem 2rem;
-    line-height: 1.8;
-}
-
-/* Testimonios */
-.testimonios-section {
-    background-color: #f9f9f9;
-}
-
-.testimonios-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding-bottom: 2rem;
-}
-
-.testimonio {
-    min-width: 300px;
-    max-width: 500px;
-    scroll-snap-align: start;
-    flex: 1;
-}
-
-.testimonio-content {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 3rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.testimonio-content::before {
-    content: '\201C';
-    font-size: 8rem;
-    position: absolute;
-    top: -2rem;
-    left: 1rem;
-    color: #3bcc75;
-    opacity: 0.3;
-}
-
-.testimonio-content p {
-    font-style: italic;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-}
-
-.cliente-info h4 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.cliente-info p {
-    font-size: 1.4rem;
-    color: #777;
-    margin: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 5rem 0 2rem;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.footer-logo img {
-    max-width: 200px;
-}
-
-.footer-links h3,
-.footer-contact h3,
-.footer-social h3 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.footer-links h3::after,
-.footer-contact h3::after,
-.footer-social h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #3bcc75;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 1rem;
-}
-
-.footer-links ul li a {
-    color: #ccc;
-    font-size: 1.4rem;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #3bcc75;
-}
-
-.footer-contact p {
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-}
-
-.footer-contact p i {
-    color: #3bcc75;
-    margin-right: 1rem;
-    font-size: 1.6rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 1.6rem;
-    transition: all 0.3s;
-}
-
-.social-icon:hover {
-    background-color: #3bcc75;
-    transform: translateY(-5px);
-}
-
-.footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 2rem;
-    text-align: center;
-    font-size: 1.4rem;
-    color: #ccc;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    section {
-        padding: 5rem 2rem;
-    }
-    
-    .container {
-        width: 90%;
-    }
-    
-    .banner-overlay h1 {
-        font-size: 3.2rem;
-    }
-    
-    .historia-content,
-    .mvv-grid,
-    .compromisos-grid,
-    .equipo-grid {
-        gap: 2rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-links h3::after,
-    .footer-contact h3::after,
-    .footer-social h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-    
-    .footer-contact p {
-        justify-content: center;
-    }
-}
+    <script src="../js/main.js"></script>
+</body>
+</html>
