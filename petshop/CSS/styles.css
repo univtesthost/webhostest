@@ -979,3 +979,92 @@ footer {
         height: 250px;
     }
 }
+
+/* Banner de Sugerencias */
+.banner-sugerencias-compacto {
+    height: 20vh;
+    background-image: url('../img/banner-nosotros.png'); /* Asegúrate de tener esta imagen */
+    background-size: contain;
+    background-position: center;
+	background-repeat: no-repeat;
+    position: relative;
+    margin-top: 8rem;
+}
+
+/* Sección de Sugerencias */
+.sugerencias-section {
+    background-color: #fff;
+    padding-bottom: 8rem;
+}
+
+.sugerencias-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.8rem;
+}
+
+.form-container-full {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.form-section-full {
+    width: 100%;
+}
+
+.sugerencias-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.sugerencias-form label {
+    display: block;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.sugerencias-form input,
+.sugerencias-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.sugerencias-form input:focus,
+.sugerencias-form textarea:focus {
+    border-color: #3bcc75;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #3bcc75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background-color: #2da362;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .form-container-full {
+        padding: 3rem;
+    }
+}
