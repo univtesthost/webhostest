@@ -1384,3 +1384,140 @@ footer {
         margin: 0 auto;
     }
 }
+
+/* Banner de Cuidados */
+.banner-cuidados-compacto {
+    height: 20vh;
+    background-image: url('../img/banner-cuidados.jpg'); /* Crear esta imagen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 8rem;
+}
+
+/* Banner de Contacto */
+.banner-contacto-compacto {
+    height: 20vh;
+    background-image: url('../img/banner-contacto.jpg'); /* Crear esta imagen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 8rem;
+}
+
+/* Sección en Construcción */
+.construccion-section {
+    padding: 5rem 0 8rem;
+    background-color: #fff;
+}
+
+.construccion-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.construccion-icon {
+    font-size: 5rem;
+    color: #3bcc75;
+    margin-bottom: 2rem;
+}
+
+.construccion-content h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.construccion-content p {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.construccion-img {
+    max-width: 400px;
+    margin: 3rem auto;
+}
+
+.construccion-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.volver-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: #3bcc75;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.volver-btn:hover {
+    background-color: #2da362;
+    transform: translateY(-3px);
+}
+
+/* Contacto alternativo */
+.contacto-alternativo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.contacto-metodo {
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.contacto-metodo:hover {
+    transform: translateY(-5px);
+}
+
+.contacto-metodo i {
+    font-size: 3rem;
+    color: #3bcc75;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-metodo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contacto-metodo p {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contacto-alternativo {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .contacto-metodo {
+        width: 80%;
+    }
+    
+    .construccion-img {
+        max-width: 300px;
+    }
+}
