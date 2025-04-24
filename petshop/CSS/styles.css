@@ -1068,3 +1068,319 @@ footer {
         padding: 3rem;
     }
 }
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-image: url('../img/banner-nosotros.png'); /* Usando una imagen existente del sitio */
+    background-size: contain;
+    background-position: center;
+	background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejorar legibilidad */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #3bcc75;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2da362;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Sección de Servicios */
+.services-section {
+    padding: 8rem 0;
+    background-color: #f9f9f9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 4rem 3rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #3bcc75;
+    margin-bottom: 2rem;
+}
+
+.service-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.service-link {
+    color: #3bcc75;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.service-link i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.service-link:hover {
+    color: #2da362;
+}
+
+.service-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Productos Destacados */
+.featured-products-section {
+    padding: 8rem 0;
+}
+
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    font-size: 1.8rem;
+    padding: 2rem 2rem 1rem;
+}
+
+.product-price {
+    color: #3bcc75;
+    font-weight: 600;
+    padding: 0 2rem;
+    font-size: 1.8rem;
+}
+
+.product-btn {
+    display: block;
+    background-color: #3bcc75;
+    color: white;
+    border: none;
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 1.2rem 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-btn:hover {
+    background-color: #2da362;
+}
+
+.view-all-container {
+    text-align: center;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-all-btn:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Sección de Adopción Destacada - Corregida */
+.featured-adoption-section {
+    padding: 8rem 0;
+    background-color: #f5f5f5;
+}
+
+.adoption-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.adoption-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 60%;
+}
+
+.adoption-text h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.adoption-text p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.adoption-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: #3bcc75;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.adoption-btn:hover {
+    background-color: #2da362;
+    transform: translateY(-3px);
+}
+
+.adoption-image {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.adoption-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .adoption-content {
+        flex-direction: column;
+    }
+    
+    .adoption-text {
+        max-width: 100%;
+    }
+    
+    .adoption-image {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+}
