@@ -1,0 +1,70 @@
+/* Estilos para formularios con Formspree */
+
+/* Validación de formularios */
+.invalid {
+    border: 2px solid #ff3860 !important;
+    background-color: #fff5f7 !important;
+}
+
+.form-check.invalid {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff5f7;
+    border: 1px solid #ff3860;
+}
+
+/* Mensaje de respuesta */
+.form-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    animation: fadeIn 0.5s;
+}
+
+.form-message.error {
+    background-color: #fff5f7;
+    color: #ff3860;
+    border-left: 4px solid #ff3860;
+}
+
+.form-message.success {
+    background-color: #f0fff4;
+    color: #23d160;
+    border-left: 4px solid #23d160;
+}
+
+/* Efectos */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Indicador de carga */
+button:disabled {
+    opacity: 0.7;
+    cursor: wait !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spin {
+    animation: spin 1s infinite linear;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-message {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
