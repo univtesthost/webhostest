@@ -1,254 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Cabecera con seguridad mejorada que permite Font Awesome -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Metaetiquetas de seguridad (mejoradas para permitir Font Awesome) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="no-referrer">
-    <title>BunnyShop - Tu tienda especializada en mascotas</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <!-- Cabecera con seguridad mejorada que permite Font Awesome -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Metaetiquetas de seguridad (mejoradas para permitir Font Awesome) -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta name="referrer" content="no-referrer">
+        <title>BunnyShop - Tu tienda especializada en mascotas</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <!-- Font Awesome para íconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script>
         // Script para deshabilitar el clic derecho
-        document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
-            alert('Esta función está deshabilitada por seguridad');
+            alert('BunnyShop: Esta función está deshabilitada por seguridad');
             return false;
         });
-        
         // Script para deshabilitar las teclas F12, Ctrl+Shift+I, Ctrl+U
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             // F12
             if (e.keyCode === 123) {
                 e.preventDefault();
                 return false;
             }
-            
             // Ctrl+Shift+I o Ctrl+Shift+J o Ctrl+U
             if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && e.keyCode === 85)) {
                 e.preventDefault();
                 return false;
             }
         });
-        
         // Monitoreo de herramientas de desarrollador
         let devToolsOpen = false;
         const devToolsDetector = () => {
             const widthThreshold = window.outerWidth - window.innerWidth > 160;
             const heightThreshold = window.outerHeight - window.innerHeight > 160;
-            
             if (widthThreshold || heightThreshold) {
                 if (!devToolsOpen) {
                     devToolsOpen = true;
-                    alert('¡Herramientas de desarrollador detectadas!');
+                    alert('BunnyShop: ¡Herramientas de desarrollador detectadas!');
                 }
             } else {
                 devToolsOpen = false;
             }
         };
-        
         setInterval(devToolsDetector, 1000);
     </script>
-</head>
-<body>
-    <!------------------------------------------Header--------------------------------------------->
-    <header>
-        <div class="container-header">
-            <nav class="nav">
-                <a href="index.html" class="logo"> <img src="img/logo.png" alt="BunnyShop Logo"> </a>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link">INICIO</a>
-                    <a href="adopta.html" class="nav-link">ADOPTA</a>
-                    <a href="cuidados.html" class="nav-link">CUIDADOS</a>
-                    <a href="productos.html" class="nav-link">PRODUCTOS</a>
-                    <a href="nosotros.html" class="nav-link">NOSOTROS</a>
-                    <a href="sugerencias.html" class="nav-link">SUGERENCIAS</a>
-                    <a href="contacto.html" class="nav-link">CONTÁCTANOS</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    </head>
+    <body>
+        <!------------------------------------------Header--------------------------------------------->
+        <header>
+            <div class="container-header">
+                <nav class="nav">
+                    <a href="index.html" class="logo"> <img src="img/logo.png" alt="BunnyShop Logo"> </a>
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link">INICIO</a>
+                        <a href="adopta.html" class="nav-link">ADOPTA</a>
+                        <a href="cuidados.html" class="nav-link">CUIDADOS</a>
+                        <a href="productos.html" class="nav-link">PRODUCTOS</a>
+                        <a href="nosotros.html" class="nav-link">NOSOTROS</a>
+                        <a href="sugerencias.html" class="nav-link">SUGERENCIAS</a>
+                        <a href="contacto.html" class="nav-link">CONTÁCTANOS</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Banner de Política de Privacidad -->
-    <section class="banner-nosotros-compacto">
-        <div class="banner-overlay">
-            <h1>Política de Privacidad</h1>
-            <p>Protegemos tus datos con el mismo cuidado que a nuestras mascotas</p>
-        </div>
-    </section>
+        <!-- Banner de Política de Privacidad -->
+        <section class="banner-nosotros-compacto">
+            <div class="banner-overlay">
+                <h1>Política de Privacidad</h1>
+                <p>Protegemos tus datos con el mismo cuidado que a nuestras mascotas</p>
+            </div>
+        </section>
 
-    <!-- Contenido de Política de Privacidad -->
-    <section class="politica-section">
-        <div class="container">
-            <div class="politica-content">
-                <h2 class="section-title">Política de Privacidad de BunnyShop</h2>
-                
-                <div class="politica-fecha">
-                    <p><strong>Última actualización:</strong> 24 de abril de 2025</p>
-                </div>
-                
-                <div class="politica-intro">
-                    <p>En BunnyShop, valoramos y respetamos tu privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos tu información personal cuando visitas nuestro sitio web o utilizas nuestros servicios. Al acceder o utilizar BunnyShop, aceptas las prácticas descritas en esta política.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>1. Información que recopilamos</h3>
-                    <p>Podemos recopilar los siguientes tipos de información:</p>
-                    <ul>
-                        <li><strong>Información personal:</strong> Nombre, dirección de correo electrónico, número de teléfono, dirección postal y detalles de pago cuando realizas una compra o te registras.</li>
-                        <li><strong>Información de adopción:</strong> Datos adicionales necesarios para el proceso de adopción de mascotas, como situación de vivienda e historial de tenencia de mascotas.</li>
-                        <li><strong>Información de navegación:</strong> Datos sobre cómo interactúas con nuestro sitio web, incluidas las páginas visitadas y las acciones realizadas.</li>
-                        <li><strong>Comunicaciones:</strong> El contenido de tus mensajes cuando nos contactas a través de formularios, correo electrónico o redes sociales.</li>
-                    </ul>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>2. Cómo utilizamos tu información</h3>
-                    <p>Utilizamos la información recopilada para:</p>
-                    <ul>
-                        <li>Procesar tus pedidos y gestionar tu cuenta.</li>
-                        <li>Facilitar y dar seguimiento a los procesos de adopción.</li>
-                        <li>Mejorar nuestros productos, servicios y experiencia del usuario.</li>
-                        <li>Comunicarnos contigo sobre tu cuenta, pedidos o consultas.</li>
-                        <li>Enviarte información sobre ofertas, eventos o noticias (si has dado tu consentimiento).</li>
-                        <li>Cumplir con nuestras obligaciones legales y resolver disputas.</li>
-                    </ul>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>3. Compartir tu información</h3>
-                    <p>Podemos compartir tu información con:</p>
-                    <ul>
-                        <li><strong>Proveedores de servicios:</strong> Empresas que nos ayudan a operar nuestro negocio (procesamiento de pagos, envíos, soporte al cliente).</li>
-                        <li><strong>Socios de adopción:</strong> Organizaciones con las que colaboramos para los procesos de adopción de mascotas.</li>
-                        <li><strong>Cumplimiento legal:</strong> Cuando sea necesario para cumplir con la ley, procesos legales o solicitudes gubernamentales.</li>
-                    </ul>
-                    <p>No vendemos ni alquilamos tu información personal a terceros con fines de marketing.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>4. Seguridad de datos</h3>
-                    <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, pérdida o alteración. Sin embargo, ninguna transmisión por Internet o almacenamiento electrónico es 100% segura. No podemos garantizar la seguridad absoluta de tus datos.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>5. Cookies y tecnologías similares</h3>
-                    <p>Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio, recordar tus preferencias y analizar cómo interactúas con nuestra plataforma. Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>6. Tus derechos de privacidad</h3>
-                    <p>Dependiendo de tu ubicación, puedes tener los siguientes derechos:</p>
-                    <ul>
-                        <li>Acceder a tu información personal.</li>
-                        <li>Corregir datos inexactos.</li>
-                        <li>Eliminar tu información en determinadas circunstancias.</li>
-                        <li>Oponerte al procesamiento de tus datos.</li>
-                        <li>Retirar tu consentimiento en cualquier momento.</li>
-                    </ul>
-                    <p>Para ejercer estos derechos, contacta con nosotros a través de los datos proporcionados al final de esta política.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>7. Retención de datos</h3>
-                    <p>Conservamos tu información personal durante el tiempo necesario para cumplir con los fines descritos en esta política, a menos que se requiera o permita un período de retención más largo por ley.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>8. Menores</h3>
-                    <p>Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionadamente información personal de menores. Si crees que hemos recopilado información de un menor, contáctanos para que podamos eliminar dicha información.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>9. Cambios en esta política</h3>
-                    <p>Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos cualquier cambio material publicando la nueva política en esta página y, cuando sea apropiado, mediante un aviso en nuestro sitio web o por correo electrónico.</p>
-                </div>
-                
-                <div class="politica-seccion">
-                    <h3>10. Contacto</h3>
-                    <p>Si tienes preguntas o preocupaciones sobre nuestra Política de Privacidad o el tratamiento de tus datos, contáctanos en:</p>
-                    <ul class="contacto-lista">
-                        <li>Email: privacidad@bunnyshop.com</li>
-                        <li>Teléfono: +123 456 789</li>
-                        <li>Dirección: Av. Principal 123, Ciudad</li>
-                    </ul>
+        <!-- Contenido de Política de Privacidad -->
+        <section class="politica-section">
+            <div class="container">
+                <div class="politica-content">
+                    <h2 class="section-title">Política de Privacidad de BunnyShop</h2>
+
+                    <div class="politica-fecha">
+                        <p><strong>Última actualización:</strong> 24 de abril de 2025</p>
+                    </div>
+
+                    <div class="politica-intro">
+                        <p>En BunnyShop, valoramos y respetamos tu privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos tu información personal cuando visitas nuestro sitio web o utilizas nuestros servicios. Al acceder o utilizar BunnyShop, aceptas las prácticas descritas en esta política.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>1. Información que recopilamos</h3>
+                        <p>Podemos recopilar los siguientes tipos de información:</p>
+                        <ul>
+                            <li><strong>Información personal:</strong> Nombre, dirección de correo electrónico, número de teléfono, dirección postal y detalles de pago cuando realizas una compra o te registras.</li>
+                            <li><strong>Información de adopción:</strong> Datos adicionales necesarios para el proceso de adopción de mascotas, como situación de vivienda e historial de tenencia de mascotas.</li>
+                            <li><strong>Información de navegación:</strong> Datos sobre cómo interactúas con nuestro sitio web, incluidas las páginas visitadas y las acciones realizadas.</li>
+                            <li><strong>Comunicaciones:</strong> El contenido de tus mensajes cuando nos contactas a través de formularios, correo electrónico o redes sociales.</li>
+                        </ul>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>2. Cómo utilizamos tu información</h3>
+                        <p>Utilizamos la información recopilada para:</p>
+                        <ul>
+                            <li>Procesar tus pedidos y gestionar tu cuenta.</li>
+                            <li>Facilitar y dar seguimiento a los procesos de adopción.</li>
+                            <li>Mejorar nuestros productos, servicios y experiencia del usuario.</li>
+                            <li>Comunicarnos contigo sobre tu cuenta, pedidos o consultas.</li>
+                            <li>Enviarte información sobre ofertas, eventos o noticias (si has dado tu consentimiento).</li>
+                            <li>Cumplir con nuestras obligaciones legales y resolver disputas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>3. Compartir tu información</h3>
+                        <p>Podemos compartir tu información con:</p>
+                        <ul>
+                            <li><strong>Proveedores de servicios:</strong> Empresas que nos ayudan a operar nuestro negocio (procesamiento de pagos, envíos, soporte al cliente).</li>
+                            <li><strong>Socios de adopción:</strong> Organizaciones con las que colaboramos para los procesos de adopción de mascotas.</li>
+                            <li><strong>Cumplimiento legal:</strong> Cuando sea necesario para cumplir con la ley, procesos legales o solicitudes gubernamentales.</li>
+                        </ul>
+                        <p>No vendemos ni alquilamos tu información personal a terceros con fines de marketing.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>4. Seguridad de datos</h3>
+                        <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, pérdida o alteración. Sin embargo, ninguna transmisión por Internet o almacenamiento electrónico es 100% segura. No podemos garantizar la seguridad absoluta de tus datos.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>5. Cookies y tecnologías similares</h3>
+                        <p>Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio, recordar tus preferencias y analizar cómo interactúas con nuestra plataforma. Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>6. Tus derechos de privacidad</h3>
+                        <p>Dependiendo de tu ubicación, puedes tener los siguientes derechos:</p>
+                        <ul>
+                            <li>Acceder a tu información personal.</li>
+                            <li>Corregir datos inexactos.</li>
+                            <li>Eliminar tu información en determinadas circunstancias.</li>
+                            <li>Oponerte al procesamiento de tus datos.</li>
+                            <li>Retirar tu consentimiento en cualquier momento.</li>
+                        </ul>
+                        <p>Para ejercer estos derechos, contacta con nosotros a través de los datos proporcionados al final de esta política.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>7. Retención de datos</h3>
+                        <p>Conservamos tu información personal durante el tiempo necesario para cumplir con los fines descritos en esta política, a menos que se requiera o permita un período de retención más largo por ley.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>8. Menores</h3>
+                        <p>Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos intencionadamente información personal de menores. Si crees que hemos recopilado información de un menor, contáctanos para que podamos eliminar dicha información.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>9. Cambios en esta política</h3>
+                        <p>Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos cualquier cambio material publicando la nueva política en esta página y, cuando sea apropiado, mediante un aviso en nuestro sitio web o por correo electrónico.</p>
+                    </div>
+
+                    <div class="politica-seccion">
+                        <h3>10. Contacto</h3>
+                        <p>Si tienes preguntas o preocupaciones sobre nuestra Política de Privacidad o el tratamiento de tus datos, contáctanos en:</p>
+                        <ul class="contacto-lista">
+                            <li>Email: privacidad@bunnyshop.com</li>
+                            <li>Teléfono: +123 456 789</li>
+                            <li>Dirección: Av. Principal 123, Ciudad</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="BunnyShop Logo">
-                    <p class="footer-slogan">Cuidando de tus mascotas con amor y compromiso</p>
-                </div>
-                
-                <div class="footer-info">
-                    <div class="footer-contact">
-                        <h3>Contacto</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Av. Principal 123, Ciudad</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <p>+123 456 789</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>info@bunnyshop.com</p>
-                        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="BunnyShop Logo">
+                        <p class="footer-slogan">Cuidando de tus mascotas con amor y compromiso</p>
                     </div>
-                    
-                    <div class="footer-social">
-                        <h3>Síguenos</h3>
-                        <div class="social-icons-vertical">
-                            <a href="#" class="social-icon-item">
-                                <i class="fab fa-facebook-f"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="#" class="social-icon-item">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="#" class="social-icon-item">
-                                <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-hours">
-                        <h3>Horario de Atención</h3>
-                        <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        <p>Sábados: 10:00 - 14:00</p>
-                        <p>Domingos: Cerrado</p>
-                    </div>
-                </div>
-            </div>       
-    
-            <div class="footer-bottom">
-    <p>&copy; 2025 BunnyShop. Todos los derechos reservados.</p>
-    <div class="footer-legal">
-        <a href="libro-reclamaciones.html" class="libro-reclamaciones">Libro de Reclamaciones</a>
-        <span class="separator">|</span>
-        <a href="politica-privacidad.html" class="active">Política de Privacidad</a>
-        <span class="separator">|</span>
-        <a href="terminos-condiciones.html">Términos y Condiciones</a>
-    </div>
-</div>
-        </div>
-    </footer>
 
-    <script src="js/main.js"></script>
-</body>
+                    <div class="footer-info">
+                        <div class="footer-contact">
+                            <h3>Contacto</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Av. Principal 123, Ciudad</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+123 456 789</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>info@bunnyshop.com</p>
+                            </div>
+                        </div>
+
+                        <div class="footer-social">
+                            <h3>Síguenos</h3>
+                            <div class="social-icons-vertical">
+                                <a href="#" class="social-icon-item">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-icon-item">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-icon-item">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-hours">
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            <p>Sábados: 10:00 - 14:00</p>
+                            <p>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                </div>       
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 BunnyShop. Todos los derechos reservados.</p>
+                    <div class="footer-legal">
+                        <a href="libro-reclamaciones.html" class="libro-reclamaciones">Libro de Reclamaciones</a>
+                        <span class="separator">|</span>
+                        <a href="politica-privacidad.html" class="active">Política de Privacidad</a>
+                        <span class="separator">|</span>
+                        <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
 </html>

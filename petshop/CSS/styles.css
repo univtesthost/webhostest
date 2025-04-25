@@ -2121,3 +2121,188 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+/* Estilos para la sección de Cuidados - para agregar en styles.css */
+
+/* Banner Cuidados */
+.banner-nosotros-compacto {
+    height: 20vh;
+    background-image: url('../img/cuidadosBaner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 8rem;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.banner-overlay p {
+    font-size: 1.4rem;
+    max-width: 500px;
+}
+
+/* Sección Cuidados */
+.seccion-cuidados {
+    background-color: #fdfdfd;
+    color: #333;
+    padding: 8rem 5% 5rem;
+    line-height: 1.8;
+}
+
+.seccion-cuidados h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    color: #3bcc75;
+}
+
+.text-principal {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    padding-inline: 15rem;
+    text-align: justify;
+}
+
+.seccion-cuidados p {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+}
+
+.contenedor-cuidados {
+    margin-bottom: 5rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    padding: 3rem 3rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #ffc845;
+}
+
+.contenedor-cuidados h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #000;
+    border-bottom: 2px solid #3bcc75;
+    padding-bottom: 1rem;
+}
+
+.contenedor-cuidados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-cuidados li {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #3bcc75;
+}
+
+.contenedor-cuidados li+p {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #555;
+    padding-left: 1.5rem;
+    border-left: 3px solid #3bcc75;
+}
+
+/* Estilos para los contenedores de video */
+.video-container {
+    margin-bottom: 5rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    padding: 3rem 3rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #ffc845;
+}
+
+.video-container h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #000;
+    border-bottom: 2px solid #3bcc75;
+    padding-bottom: 1rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-description {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid #3bcc75;
+}
+
+/* Responsive para la sección de Cuidados */
+@media screen and (max-width: 768px) {
+    .seccion-cuidados {
+        padding: 6rem 2rem;
+    }
+
+    .seccion-cuidados h1 {
+        font-size: 2.8rem;
+    }
+    
+    .text-principal {
+        padding-inline: 0;
+    }
+    
+    .contenedor-cuidados {
+        padding: 2rem;
+    }
+    
+    .contenedor-cuidados h2 {
+        font-size: 2rem;
+    }
+    
+    .video-container {
+        padding: 2rem;
+    }
+    
+    .video-container h2 {
+        font-size: 2rem;
+    }
+    
+    .video-description {
+        font-size: 1.5rem;
+    }
+}

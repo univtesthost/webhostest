@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Cabecera con seguridad mejorada que permite Font Awesome -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Metaetiquetas de seguridad (mejoradas para permitir Font Awesome) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="no-referrer">
-    <title>BunnyShop - Tu tienda especializada en mascotas</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <!-- Cabecera con seguridad mejorada que permite Font Awesome -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Metaetiquetas de seguridad (mejoradas para permitir Font Awesome) -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta name="referrer" content="no-referrer">
+        <title>BunnyShop - Tu tienda especializada en mascotas</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <!-- Font Awesome para íconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script>
         // Script para deshabilitar el clic derecho
-        document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
-            alert('Esta función está deshabilitada por seguridad');
+            alert('BunnyShop: Esta función está deshabilitada por seguridad');
             return false;
         });
-        
         // Script para deshabilitar las teclas F12, Ctrl+Shift+I, Ctrl+U
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             // F12
             if (e.keyCode === 123) {
                 e.preventDefault();
                 return false;
             }
-            
             // Ctrl+Shift+I o Ctrl+Shift+J o Ctrl+U
             if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && e.keyCode === 85)) {
                 e.preventDefault();
                 return false;
             }
         });
-        
         // Monitoreo de herramientas de desarrollador
         let devToolsOpen = false;
         const devToolsDetector = () => {
             const widthThreshold = window.outerWidth - window.innerWidth > 160;
             const heightThreshold = window.outerHeight - window.innerHeight > 160;
-            
             if (widthThreshold || heightThreshold) {
                 if (!devToolsOpen) {
                     devToolsOpen = true;
-                    alert('¡Herramientas de desarrollador detectadas!');
+                    alert('BunnyShop: ¡Herramientas de desarrollador detectadas!');
                 }
             } else {
                 devToolsOpen = false;
             }
         };
-        
         setInterval(devToolsDetector, 1000);
     </script>
-</head>
+    </head>
     <body>
         <!------------------------------------------Header--------------------------------------------->
         <header>
@@ -335,27 +330,27 @@
 
         <script src="js/main.js"></script>
         <script>
-            // Script para las FAQ desplegables
-            document.addEventListener('DOMContentLoaded', function () {
-                const faqItems = document.querySelectorAll('.faq-question');
+        // Script para las FAQ desplegables
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-question');
 
-                faqItems.forEach(item => {
-                    item.addEventListener('click', function () {
-                        const parent = this.parentNode;
-                        parent.classList.toggle('active');
+            faqItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const parent = this.parentNode;
+                    parent.classList.toggle('active');
 
-                        // Cambiar icono
-                        const icon = this.querySelector('i');
-                        if (parent.classList.contains('active')) {
-                            icon.classList.remove('fa-chevron-down');
-                            icon.classList.add('fa-chevron-up');
-                        } else {
-                            icon.classList.remove('fa-chevron-up');
-                            icon.classList.add('fa-chevron-down');
-                        }
-                    });
+                    // Cambiar icono
+                    const icon = this.querySelector('i');
+                    if (parent.classList.contains('active')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
                 });
             });
+        });
         </script>
     </body>
 </html>

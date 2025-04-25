@@ -1,69 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Cabecera con seguridad mejorada que permite Font Awesome -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Metaetiquetas de seguridad (mejoradas para permitir Font Awesome) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;">
+    <!-- Metaetiquetas de seguridad (corregidas para permitir todos los recursos necesarios) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data:; frame-src 'self' https://www.youtube.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="referrer" content="no-referrer">
-    <title>BunnyShop - Tu tienda especializada en mascotas</title>
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>Cuidados</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <!-- Font Awesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <script>
         // Script para deshabilitar el clic derecho
-        document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
-            alert('Esta función está deshabilitada por seguridad');
+            alert('BunnyShop: Esta función está deshabilitada por seguridad');
             return false;
         });
-        
         // Script para deshabilitar las teclas F12, Ctrl+Shift+I, Ctrl+U
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             // F12
             if (e.keyCode === 123) {
                 e.preventDefault();
                 return false;
             }
-            
             // Ctrl+Shift+I o Ctrl+Shift+J o Ctrl+U
             if ((e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && e.keyCode === 85)) {
                 e.preventDefault();
                 return false;
             }
         });
-        
         // Monitoreo de herramientas de desarrollador
         let devToolsOpen = false;
         const devToolsDetector = () => {
             const widthThreshold = window.outerWidth - window.innerWidth > 160;
             const heightThreshold = window.outerHeight - window.innerHeight > 160;
-            
             if (widthThreshold || heightThreshold) {
                 if (!devToolsOpen) {
                     devToolsOpen = true;
-                    alert('¡Herramientas de desarrollador detectadas!');
+                    alert('BunnyShop: ¡Herramientas de desarrollador detectadas!');
                 }
             } else {
                 devToolsOpen = false;
             }
         };
-        
         setInterval(devToolsDetector, 1000);
     </script>
+    <!-- Estilos adicionales para cuidados -->
+    <style>
+        /* Estilos para la nueva página de cuidados */
+        .cuidados-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .video-card {
+            background-color: #fff;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #3bcc75;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-thumbnail iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-content {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .video-description {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .cuidados-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .cuidados-intro p {
+            font-size: 1.7rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .cuidados-section-title {
+            font-size: 2.4rem;
+            margin: 4rem 0 2rem;
+            color: #333;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .cuidados-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8rem;
+            height: 0.3rem;
+            background-color: #3bcc75;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .tag {
+            background-color: #f0f8f4;
+            color: #3bcc75;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .cuidados-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cuidados-intro p {
+                font-size: 1.6rem;
+            }
+            
+            .cuidados-section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
     <!------------------------------------------Header--------------------------------------------->
     <header>
         <div class="container-header">
             <nav class="nav">
                 <a href="index.html" class="logo"> <img src="img/logo.png" alt="BunnyShop Logo"> </a>
                 <div class="nav-links">
-					<a href="index.html" class="nav-link">INICIO</a>
                     <a href="adopta.html" class="nav-link">ADOPTA</a>
                     <a href="cuidados.html" class="nav-link active">CUIDADOS</a>
                     <a href="productos.html" class="nav-link">PRODUCTOS</a>
@@ -75,98 +196,235 @@
         </div>
     </header>
 
-    <!-- Banner de Cuidados -->
-    <section class="banner-cuidados-compacto">
+    <!-- Banner de cuidados -->
+    <section class="banner-nosotros-compacto">
         <div class="banner-overlay">
-            <h1>Cuidados para tu Mascota</h1>
-            <p>Consejos y guías para mantener a tus mascotas saludables y felices</p>
+            <h1>Cuidados principales</h1>
+            <p>Todo lo que necesitas saber para el bienestar de tu mascota</p>
         </div>
     </section>
 
-    <!-- Sección En Construcción -->
-    <section class="construccion-section">
-        <div class="container">
-            <div class="construccion-content">
-                <div class="construccion-icon">
-                    <i class="fas fa-hard-hat"></i>
+    <!-- Introducción a cuidados -->
+    <section class="seccion-cuidados">
+        <div class="cuidados-intro">
+            <p>Los conejos son mascotas que requieren atención y cuidados específicos. En esta sección encontrarás guías prácticas para asegurar la salud y felicidad de tu compañero. Desde alimentación y hábitat, hasta higiene y socialización.</p>
+        </div>
+
+        <!-- SECCIÓN 1: CUIDADOS BÁSICOS -->
+        <h2 class="cuidados-section-title">Guías Básicas de Cuidado</h2>
+        <div class="cuidados-grid">
+            <!-- Video 1: Introducción -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/Arq0ySEI_dQ" title="Introducción a los cuidados básicos de tu mascota" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <h2>Sitio en Construcción</h2>
-                <p>Estamos trabajando para ofrecerte los mejores consejos y guías de cuidado para tus mascotas.</p>
-                <p>¡Vuelve pronto para encontrar información valiosa sobre la alimentación, salud y bienestar de tus compañeros peludos!</p>
-                <div class="construccion-img">
-                    <img src="img/construccion.png" alt="Sitio en construcción">
+                <div class="video-content">
+                    <h3 class="video-title">Introducción a los cuidados</h3>
+                    <p class="video-description">Conoce lo esencial para comenzar a cuidar de tu mascota correctamente y asegurar su bienestar.</p>
+                    <div class="tags">
+                        <span class="tag">Principiantes</span>
+                        <span class="tag">General</span>
+                    </div>
                 </div>
-                <a href="index.html" class="volver-btn">Volver al inicio</a>
+            </div>
+
+            <!-- Video 2: Alimentación -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/OEhOEdjuW-8" title="Guía completa de alimentación para conejos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Alimentación correcta</h3>
+                    <p class="video-description">Aprende qué alimentos son recomendados, cuáles evitar y cómo establecer horarios adecuados para tu mascota.</p>
+                    <div class="tags">
+                        <span class="tag">Nutrición</span>
+                        <span class="tag">Diario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 3: Higiene y salud -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/RtCs0I7T1yk" title="Cuidados de higiene y salud para mascota" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Higiene y salud básica</h3>
+                    <p class="video-description">Guía práctica para mantener la limpieza de tu mascota y su hábitat, e identificar señales de problemas comunes.</p>
+                    <div class="tags">
+                        <span class="tag">Higiene</span>
+                        <span class="tag">Prevención</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: ENRIQUECIMIENTO Y COMPORTAMIENTO -->
+        <h2 class="cuidados-section-title">Enriquecimiento y Comportamiento</h2>
+        <div class="cuidados-grid">
+            <!-- Video 4: Enriquecimiento ambiental -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/UcwKJDWs6wc" title="Juegos y actividades para mascotas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Juegos y enriquecimiento</h3>
+                    <p class="video-description">Descubre cómo mantener a tu mascota estimulada con juguetes caseros, actividades y modificaciones en su entorno.</p>
+                    <div class="tags">
+                        <span class="tag">Actividades</span>
+                        <span class="tag">Bienestar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 5: Lenguaje corporal -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/2c-D7cVmeWg" title="Lenguaje corporal y comportamiento de las mascotas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Lenguaje corporal</h3>
+                    <p class="video-description">Aprende a interpretar las señales y comportamientos de tu mascota para entender mejor sus necesidades.</p>
+                    <div class="tags">
+                        <span class="tag">Comportamiento</span>
+                        <span class="tag">Comunicación</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 6: Socialización -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/ZRxuk80yPgA" title="Socialización y entrenamiento de tus mascotas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Socialización y vínculo</h3>
+                    <p class="video-description">Consejos para establecer una buena relación con tu mascota y técnicas básicas de entrenamiento.</p>
+                    <div class="tags">
+                        <span class="tag">Entrenamiento</span>
+                        <span class="tag">Socialización</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: CUIDADOS AVANZADOS -->
+        <h2 class="cuidados-section-title">Cuidados Específicos</h2>
+        <div class="cuidados-grid">
+            <!-- Video 7: Cuidados especiales -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/cduBsaY4_4U" title="Cuidados especiales para conejos con necesidades específicas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Cuidados especiales</h3>
+                    <p class="video-description">Guía para atender a conejos con necesidades particulares: mayores, enfermos o con requerimientos especiales.</p>
+                    <div class="tags">
+                        <span class="tag">Avanzado</span>
+                        <span class="tag">Veterinario</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 8: Gestación y crías -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/j2uDh6Myx28" title="Cuidados durante gestación y para crías de conejo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Gestación y crías</h3>
+                    <p class="video-description">Todo lo que necesitas saber si tu coneja está esperando crías o si estás cuidando de gazapos.</p>
+                    <div class="tags">
+                        <span class="tag">Reproducción</span>
+                        <span class="tag">Crías</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video 9: Medicina preventiva -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/2S6NUYHeJ9Y" title="Medicina preventiva para conejos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Medicina preventiva</h3>
+                    <p class="video-description">Consejos para prevenir enfermedades comunes, visitas veterinarias recomendadas y cuidados anuales.</p>
+                    <div class="tags">
+                        <span class="tag">Salud</span>
+                        <span class="tag">Prevención</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="img/logo.png" alt="BunnyShop Logo">
-                <p class="footer-slogan">Cuidando de tus mascotas con amor y compromiso</p>
-            </div>
-            
-            <div class="footer-info">
-                <div class="footer-contact">
-                    <h3>Contacto</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Av. Principal 123, Ciudad</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+123 456 789</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>info@bunnyshop.com</p>
-                    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="BunnyShop Logo">
+                    <p class="footer-slogan">Cuidando de tus mascotas con amor y compromiso</p>
                 </div>
-                
-                <div class="footer-social">
-                    <h3>Síguenos</h3>
-                    <div class="social-icons-vertical">
-                        <a href="#" class="social-icon-item">
-                            <i class="fab fa-facebook-f"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="#" class="social-icon-item">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="#" class="social-icon-item">
-                            <i class="fab fa-twitter"></i>
-                            <span>Twitter</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-hours">
-                    <h3>Horario de Atención</h3>
-                    <p>Lunes a Viernes: 9:00 - 18:00</p>
-                    <p>Sábados: 10:00 - 14:00</p>
-                    <p>Domingos: Cerrado</p>
-                </div>
-            </div>
-        </div>       
 
-        <div class="footer-bottom">
-    <p>&copy; 2025 BunnyShop. Todos los derechos reservados.</p>
-    <div class="footer-legal">
-        <a href="libro-reclamaciones.html" class="libro-reclamaciones">Libro de Reclamaciones</a>
-        <span class="separator">|</span>
-        <a href="politica-privacidad.html">Política de Privacidad</a>
-        <span class="separator">|</span>
-        <a href="terminos-condiciones.html">Términos y Condiciones</a>
-    </div>
-</div>
-    </div>
-</footer>
+                <div class="footer-info">
+                    <div class="footer-contact">
+                        <h3>Contacto</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Av. Principal 123, Ciudad</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+123 456 789</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@bunnyshop.com</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-social">
+                        <h3>Síguenos</h3>
+                        <div class="social-icons-vertical">
+                            <a href="#" class="social-icon-item">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-icon-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-icon-item">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-hours">
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 14:00</p>
+                        <p>Domingos: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 BunnyShop. Todos los derechos reservados.</p>
+                    <div class="footer-legal">
+                        <a href="libro-reclamaciones.html" class="libro-reclamaciones">Libro de Reclamaciones</a>
+                        <span class="separator">|</span>
+                        <a href="politica-privacidad.html">Política de Privacidad</a>
+                        <span class="separator">|</span>
+                        <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    </div>
+                </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
