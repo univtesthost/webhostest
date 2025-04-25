@@ -1388,10 +1388,9 @@ footer {
 /* Banner de Cuidados */
 .banner-cuidados-compacto {
     height: 20vh;
-    background-image: url('../img/banner-nosotros.png'); /* Crear esta imagen */
-    background-size: contain;
+    background-image: url('../img/banner-cuidados.jpg'); /* Crear esta imagen */
+    background-size: cover;
     background-position: center;
-background-repeat: no-repeat;	
     position: relative;
     margin-top: 8rem;
 }
@@ -1521,5 +1520,604 @@ background-repeat: no-repeat;
     
     .construccion-img {
         max-width: 300px;
+    }
+}
+
+/* Estilos para Libro de Reclamaciones */
+.libro-reclamaciones {
+    color: #ffe066 !important; /* Color amarillo más claro para destacar */
+    position: relative;
+    padding-left: 2.2rem;
+}
+
+.libro-reclamaciones::before {
+    content: "📋"; /* Emoji de portapapeles */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+}
+
+.libro-reclamaciones:hover {
+    color: #3bcc75 !important; /* Mismo verde que otros elementos interactivos */
+}
+
+/* En pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .libro-reclamaciones {
+        margin-top: 1rem;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Estilos para Libro de Reclamaciones */
+.libro-reclamaciones {
+    color: #ffe066 !important; /* Color amarillo más claro para destacar */
+    position: relative;
+    padding-left: 2.2rem;
+}
+
+.libro-reclamaciones::before {
+    content: "📋"; /* Emoji de portapapeles */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+}
+
+.libro-reclamaciones:hover {
+    color: #3bcc75 !important; /* Mismo verde que otros elementos interactivos */
+}
+
+/* Banner de Reclamaciones */
+.banner-reclamaciones-compacto {
+    height: 20vh;
+    background-image: url('../img/banner-nosotros.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 8rem;
+}
+
+/* Sección de Reclamaciones */
+.reclamaciones-section {
+    background-color: #fff;
+    padding-bottom: 8rem;
+}
+
+.reclamaciones-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.reclamaciones-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.reclamaciones-form label {
+    display: block;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.reclamaciones-form input,
+.reclamaciones-form select,
+.reclamaciones-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.reclamaciones-form input:focus,
+.reclamaciones-form select:focus,
+.reclamaciones-form textarea:focus {
+    border-color: #3bcc75;
+    outline: none;
+}
+
+.reclamaciones-form input[type="file"] {
+    padding: 0.8rem 0;
+    border: none;
+    background-color: #f8f8f8;
+}
+
+.reclamaciones-form button {
+    background-color: #3bcc75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.reclamaciones-form button:hover {
+    background-color: #2da362;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .libro-reclamaciones {
+        margin-top: 1rem;
+        display: block;
+        text-align: center;
+    }
+    
+    .reclamaciones-form button {
+        align-self: center;
+        width: 100%;
+    }
+}
+
+/* Estilos adicionales para las páginas de Política de Privacidad y Términos y Condiciones */
+
+/* Contenedor principal */
+.politica-content,
+.terminos-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Título de sección */
+.politica-section .section-title,
+.terminos-section .section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Fecha de actualización */
+.politica-fecha,
+.terminos-fecha {
+    margin-bottom: 2.5rem;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+/* Introducción */
+.politica-intro,
+.terminos-intro {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+/* Secciones */
+.politica-seccion,
+.terminos-seccion {
+    margin-bottom: 3.5rem;
+}
+
+.politica-seccion h3,
+.terminos-seccion h3 {
+    font-size: 2.2rem;
+    color: #3bcc75;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.politica-seccion h4,
+.terminos-seccion h4 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: #444;
+}
+
+.politica-seccion p,
+.terminos-seccion p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Listas */
+.politica-seccion ul,
+.terminos-seccion ul {
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.politica-seccion ul li,
+.terminos-seccion ul li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+/* Lista de contacto */
+.contacto-lista {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.contacto-lista li {
+    padding: 0.8rem 0;
+    font-size: 1.6rem;
+    color: #3bcc75;
+}
+
+/* Enlace activo en el footer */
+.footer-legal a.active {
+    color: #3bcc75 !important;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .politica-content,
+    .terminos-content {
+        padding: 1.5rem;
+    }
+    
+    .politica-section .section-title,
+    .terminos-section .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .politica-seccion h3,
+    .terminos-seccion h3 {
+        font-size: 2rem;
+    }
+    
+    .politica-seccion h4,
+    .terminos-seccion h4 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Estilos para la página de contacto */
+
+/* Sección de contacto principal */
+.contacto-section {
+    background-color: #fff;
+    padding-bottom: 5rem;
+}
+
+.contacto-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+/* Contenedor de dos columnas */
+.contacto-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+/* Columna de información de contacto */
+.contacto-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    background-color: #3bcc75;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+
+.info-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.info-details p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Redes sociales en sección de contacto */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #3bcc75;
+    transform: translateY(-3px);
+}
+
+/* Formulario de contacto */
+.contacto-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-form-container h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contacto-form-container p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contacto-form label {
+    display: block;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+    border-color: #3bcc75;
+    outline: none;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.form-check input {
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+}
+
+.form-check label {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.form-check a {
+    color: #3bcc75;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background-color: #3bcc75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background-color: #2da362;
+}
+
+/* Sección de mapa */
+.mapa-section {
+    background-color: #f5f5f5;
+    padding: 5rem 0;
+}
+
+.mapa-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mapa-placeholder {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.mapa-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+.mapa-overlay p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mapa-overlay .small {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+/* Sección de Preguntas Frecuentes */
+.faq-section {
+    background-color: #fff;
+    padding: 5rem 0 8rem;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #f5f5f5;
+}
+
+.faq-question h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+}
+
+.faq-question i {
+    color: #3bcc75;
+    font-size: 1.6rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    padding: 2rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contacto-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .info-card {
+        padding: 1.5rem;
+    }
+    
+    .info-icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        margin-right: 1.5rem;
+    }
+    
+    .contacto-form-container {
+        padding: 2rem;
+    }
+    
+    .submit-btn {
+        align-self: center;
+        width: 100%;
+    }
+    
+    .mapa-placeholder {
+        height: 300px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.6rem;
     }
 }
