@@ -94,7 +94,7 @@ header {
 .banner-nosotros {
     height: 20vh;
     background-image: url('../img/banner-nosotros.png');
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center;
 	background-repeat: no-repeat;
     position: relative;
@@ -853,8 +853,8 @@ footer {
 /* Banner de Adopta */
 .banner-adopta {
     height: 20vh;
-    background-image: url('../img/banner-nosotros.png'); /* Asegúrate de tener esta imagen */
-    background-size: contain;
+    background-image: url('../img/banner-adopta.png');
+    background-size: 100% 100%;
     background-position: center;
 	background-repeat: no-repeat;
     position: relative;
@@ -992,8 +992,8 @@ footer {
 /* Banner de Sugerencias */
 .banner-sugerencias {
     height: 20vh;
-    background-image: url('../img/banner-nosotros.png'); /* Asegúrate de tener esta imagen */
-    background-size: contain;
+    background-image: url('../img/banner-sugerencias.png'); /* Asegúrate de tener esta imagen */
+    background-size: 100% 100%;
     background-position: center;
 	background-repeat: no-repeat;
     position: relative;
@@ -1081,7 +1081,7 @@ footer {
 /* Hero Section */
 .hero-section {
     height: 100vh;
-    background-image: url('../img/banner-nosotros.png'); /* Usando una imagen existente del sitio */
+    background-image: url('../img/banner-index.png'); /* Usando una imagen existente del sitio */
     background-size: contain;
     background-position: center;
 	background-repeat: no-repeat;
@@ -1397,9 +1397,10 @@ footer {
 /* Banner de Cuidados */
 .banner-cuidados {
     height: 20vh;
-    background-image: url('../img/banner-cuidados.jpg'); /* Crear esta imagen */
-    background-size: cover;
+    background-image: url('../img/cuidadosBanner.jpg'); /* Crear esta imagen */
+    background-size: contain;
     background-position: center;
+	background-repeat: no-repeat;
     position: relative;
     margin-top: 8rem;
 }
@@ -1407,8 +1408,8 @@ footer {
 /* Banner de Contacto */
 .banner-contacto {
     height: 20vh;
-    background-image: url('../img/banner-nosotros.png');
-    background-size: contain;
+    background-image: url('../img/banner-contacto.png');
+    background-size: 100% 100%;
     background-position: center;
 	background-repeat: no-repeat;
     position: relative;
@@ -1584,8 +1585,8 @@ footer {
 /* Banner de Reclamaciones */
 .banner-reclamaciones {
     height: 20vh;
-    background-image: url('../img/banner-nosotros.png');
-    background-size: contain;
+    background-image: url('../img/banner-reclamo.png');
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -2358,4 +2359,24 @@ footer {
     .mobile-menu-btn {
         display: block;
     }
+}
+
+.banner-condiciones {
+    height: 20vh;
+    background-image: url('../img/banner-condiciones.png');
+    background-size: 100% 100%;
+    background-position: center;
+	background-repeat: no-repeat;
+    position: relative;
+    margin-top: 8rem;
+}
+
+.banner-privacidad {
+    height: 20vh;
+    background-image: url('../img/banner-nosotros.png');
+    background-size: 100% 100%;
+    background-position: center;
+	background-repeat: no-repeat;
+    position: relative;
+    margin-top: 8rem;
 }
